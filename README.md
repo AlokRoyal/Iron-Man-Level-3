@@ -1,17 +1,19 @@
 # Iron Man — Level 3
 
-A browser-based platform-style game prototype. Move Iron Man, jump between falling platforms, and collect diamonds to increase the on-screen score.
+A p5.js game prototype that builds on the Iron Man platform mechanics. Move the character across a scrolling background, land on falling bricks, and collect diamonds to raise the score.
 
-## Controls
+## Controls and objective
 
-Use the left and right arrow keys to move and the up arrow to jump.
+Use the left and right arrow keys to move and the up arrow to jump. Diamonds add to the on-screen score. Bricks are generated as moving platforms; continue navigating and collecting items.
 
-## Stack
+## How the sketch is organized
 
-- HTML5
-- JavaScript with p5.js and p5.play
-- CSS and local assets in `images/`; supporting libraries are in `lib/`
+sketch.js loads background, character, brick, and diamond images from images/. It creates sprite groups, updates movement and gravity in the frame loop, checks collisions, generates objects at intervals, and renders the score. Canvas dimensions and gameplay values are defined in the sketch.
 
-## Run
+## Run locally
 
-Open `index.html` in a browser with the project folders kept in place. No build step is configured.
+Open index.html in a browser with images/, lib/, and CSS/ present. No package manager or build step is configured. Use a local static server if your browser blocks local asset loading.
+
+## Technology
+
+HTML5, CSS3, JavaScript, p5.js, and p5.play. The game keeps state in memory and does not use a backend or persistent scores.
